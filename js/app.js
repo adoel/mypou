@@ -16,7 +16,7 @@
     // MAKAN
     $(document).on('click', 'footer div.food img', function(event) {
         var currentHeight = $('li span.food').getHeightInPercent(),
-            target = currentHeight + 20;
+            target = currentHeight + 100;
 
         if (target > 10) { $('body').removeClass('hungry'); }
         if (target > 100) { target = 100; }
@@ -44,25 +44,25 @@
         }
 
         // Laper kagak
-        // var foodCurrentHeight = $('li span.food').getHeightInPercent(),
-        //     foodTarget = foodCurrentHeight - 10;
+        var foodCurrentHeight = $('li span.food').getHeightInPercent(),
+            foodTarget = foodCurrentHeight - 10;
 
-        // if (foodTarget <= 10 ||  foodCurrentHeight < 10) { $('body').addClass('hungry'); }
-        // if (foodTarget < 0) { foodTarget = 0; }
+        if (foodTarget <= 10 ||  foodCurrentHeight < 10) { $('body').addClass('hungry'); }
+        if (foodTarget < 0) { foodTarget = 0; }
 
-        // $('li span.food').css('height', foodTarget.toString() + '%' );
+        $('li span.food').css('height', foodTarget.toString() + '%' );
 
         // Energy
-        // var isSleeping = $('body').hasClass('sleeping'),
-        //     energyCurrentHeight = $('li span.energy').getHeightInPercent(),
-        //     energyTarget = (! isSleeping) ? energyCurrentHeight - 10 : energyCurrentHeight + 10;
+        var isSleeping = $('body').hasClass('sleeping'),
+            energyCurrentHeight = $('li span.energy').getHeightInPercent(),
+            energyTarget = (! isSleeping) ? energyCurrentHeight - 10 : energyCurrentHeight + 10;
 
-        // if (energyTarget <= 10 || energyCurrentHeight < 10) { $('body').addClass('sleepy'); }
-        // if (energyCurrentHeight > 10) { $('body').removeClass('sleepy'); }
-        // if (energyTarget < 0) { energyTarget = 0; }
-        // if (energyTarget > 100) { energyTarget = 100; }
+        if (energyTarget <= 10 || energyCurrentHeight < 10) { $('body').addClass('sleepy'); }
+        if (energyCurrentHeight > 10) { $('body').removeClass('sleepy'); }
+        if (energyTarget < 0) { energyTarget = 0; }
+        if (energyTarget > 100) { energyTarget = 100; }
 
-        // $('li span.energy').css('height', energyTarget.toString() + '%' );
+        $('li span.energy').css('height', energyTarget.toString() + '%' );
 
     }, (1000));
 })(window.$, window.moment);

@@ -113,6 +113,11 @@ footer div {float: left;}
 
 .sleepy .lamp img {display: block; width: 35px;margin:0 0 10px 10px;}
 .sleepy .lamp {z-index: 2; position: absolute; bottom: 0px; right: 10px}
+.sleepy .lips {
+    border-bottom: none;
+    border-top: 14px solid;
+    border-radius:50px 50px 0px 0px !important;
+}
 
 
 /*.sleepy .lips {border-radius: 0px}*/
@@ -208,6 +213,11 @@ footer div {float: left;}
 }
 .sleeping .lamp {z-index: 3; position: absolute; bottom: 0px; right: 10px}
 .sleeping .lamp img {display: block; width: 35px;margin:0 0 10px 10px;}
+.sleeping .lips {
+    border-bottom: none;
+    border-top: 14px solid;
+    border-radius:50px 50px 0px 0px !important;
+}
 
 /*========================================== end css sleeping ==================================================*/
 
