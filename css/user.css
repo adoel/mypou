@@ -205,5 +205,6 @@ footer div {float: left;}
     height: 1px;
     margin-top: 24px;
 }
+.sleeping .lamp {z-index: 3; position: absolute; bottom: 0px; right: 10px}
 
 /*========================================== end css sleeping ==================================================*/
