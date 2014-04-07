@@ -1,3 +1,11 @@
+<?php 
+
+include "connection.php"; 
+include_once('food.php');
+include_once('pou.php');
+
+?>
+
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -19,3 +27,23 @@
         <script src="./js/app.js"></script>
     </body>
 </html>
+
+<?php 
+    
+$pouConfig = array(
+                    // 'name' => "Adoel",
+                    'gender' => 'female',
+                    'weight' => 1,
+                    'height' => 4 
+                );
+
+$pou = new Pou($pouConfig);
+$pou->setName('Adoel');
+echo $pou->getName();
+
+$pou->initFood(new Food());
+$pou->eat('basreng');
+echo $pou->getEnergy();
+
+// $pou->name = 'Tutud';
+
